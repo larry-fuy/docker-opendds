@@ -20,12 +20,13 @@ Requirement
 -----------
 [Docker](https://docs.docker.com/installation/#installation) (version >= 0.9)
 
-[docker TAO](https://github.com/larry-fuy/docker-TAO)
+[docker-TAO](https://github.com/larry-fuy/docker-TAO)
 
 Installation
 -----------
 
-* Run ```./build.sh``` to get image
+* Run ```./build.sh``` to get the image.
+* Run ```docker -i -t yongfu/opendds``` to explore.
 
 * [Install OpenDDS on Linux](http://www.opendds.org/building.html)
 
