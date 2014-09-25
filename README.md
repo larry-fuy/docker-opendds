@@ -19,7 +19,7 @@ Repository (DCPSInfoRepo).
 Installation
 =========
 
-* Run ```docker build -t oci/OpenDDS``` to get image
+* Run ```build.sh``` to get image
 
 * [Install OpenDDS on Linux](http://www.opendds.org/building.html)
 
