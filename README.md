@@ -26,7 +26,6 @@ Installation
 -----------
 
 * Run ```./build.sh``` to get the image.
-* Run ```docker -i -t yongfu/opendds``` to explore.
 
 * [Install OpenDDS on Linux](http://www.opendds.org/building.html)
 
