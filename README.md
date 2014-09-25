@@ -16,8 +16,14 @@ leverages capabilities of
 as its IDL compiler and as the basis of the OpenDDS DCPS Information
 Repository (DCPSInfoRepo).
 
+Requirement
+-----------
+[Docker](https://docs.docker.com/installation/#installation) (version >= 0.9)
+
+[docker-TAO](https://github.com/larry-fuy/docker-TAO)
+
 Installation
-=========
+-----------
 
 * Run ```build.sh``` to get image
 
