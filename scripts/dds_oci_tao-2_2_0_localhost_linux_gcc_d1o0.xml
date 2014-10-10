@@ -26,7 +26,7 @@
   <command name="process_listener"   options="localhost:32001"/>
 -->
   <command name="status"             options="on"/>
-<!--  <command name="log"                options="on"/> -->
+  <command name="log"                options="on"/>
   <command name="svn"                options="co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk DDS"/>
 <!-- if 2.2a use this
   <command name="svn"                options="co svn+ssh://svn.ociweb.com/ocitao/sets/tao-2_2_0 ."/>
@@ -35,13 +35,15 @@
 
   <command name="rem_sems"/>
   <command name="file_manipulation"  options="type=create file=DDS/setenv.sh output='ACE_ROOT=\x22/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/ACE_wrappers\x22; export ACE_ROOT\nDDS_ROOT=\x22/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/DDS\x22; export DDS_ROOT\nLD_LIBRARY_PATH=\x22/usr/local/lib:/tao_builds/taoadmin/DDS/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/lib:/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/ACE_wrappers/lib:\x22; export LD_LIBRARY_PATH\nMPC_ROOT=\x22/tao_builds/taoadmin/MPC\x22; export MPC_ROOT\nOPENDDS_RTPS_DEFAULT_D0=\x22131\x22; export OPENDDS_RTPS_DEFAULT_D0\nPATH=\x22/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/DDS/bin:/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/ACE_wrappers/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\x22; export PATH\nTAO_ROOT=\x22/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/ACE_wrappers/TAO\x22; export TAO_ROOT\n'"/>
-  <command name="file_manipulation"  options="type=create file=DDS/user_macros.GNU output=''"/>
+
+  <command name="file_manipulation"  options="type=create file=/tao_builds/taoadmin/dds_oci_tao-2_2_0_localhost_linux_gcc_d1o0/ACE_wrappers/include/makeinclude/platform_macros.GNU output='debug=0\noptimize=1\ninterceptors=0\ncorba_e_compact=1\ninclude $(ACE_ROOT)/include/makeinclude/platform_linux.GNU\n'"/>
+  <command name="file_manipulation"  options="type=update file=ACE_wrappers/ace/config.h output='#include \x22ace/config-linux.h\x22\n'"/>
   <command name="print_os_version"/>
   <command name="print_env_vars"/>
   <command name="print_ace_config"   options="ACE=OCIChangeLog TAO=OCIChangeLog CIAO=OCIChangeLog XML_URL=https://svn.ociweb.com/viewvc/nightly"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="gcc"/>
-  <command name="generate_workspace" options="-type gnuace DDS_TAOv2.mwc -features wireshark=1,qt4=1,java=1,boost=1 dirs=DDS"/>
+  <command name="generate_workspace" options="-type gnuace DDS_TAOv2.mwc dirs=DDS"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k  find=*akefile dir=DDS depend"/>
