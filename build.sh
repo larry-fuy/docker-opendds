@@ -15,7 +15,7 @@ print_usage() {
 
 if [ $# -eq 0 ]; then
     cp Dockerfile_configure Dockerfile
-else if [ $# -eq 1 ]; then 
+elif [ $# -eq 1 ]; then 
     cp Dockerfile_autobuild Dockerfile
 else 
     print_usage
