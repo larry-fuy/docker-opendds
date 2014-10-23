@@ -4,3 +4,5 @@ MAINTAINER Yong Fu fuy@ociweb.com
 
 RUN apt-get update -q
 RUN apt-get install subversion perl build-essential curl nfs-common -y
+ADD scripts /scripts
+RUN cd /scripts && ./install_dds.sh dds_build

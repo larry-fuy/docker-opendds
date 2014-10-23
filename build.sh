@@ -1,10 +1,26 @@
 #!/usr/bin/sh
 
-# default installation is to use ./configure
-cp  Dockerfile_configure Dockerfile
+error() {
+    echo "$@" 1>&2
+}
 
-if [ $1 == "autobuild" ] ; then
+fail() {
+    error "$@" && exit 1
+}
+
+print_usage() {
+    printf "Usage: build.sh [autobuild | configure] build_file]\n"
+    printf "Build a Docker image with OpenDDS installed (by using configure or autobuild tool)\n"
+}
+
+if [ $# -eq 0 ]; then
+    cp Dockerfile_configure Dockerfile
+else if [ $# -eq 1 ]; then 
     cp Dockerfile_autobuild Dockerfile
+    sed -i 's/dds_build/$1/g' Dockerfile
+else 
+    print_usage
+    exit 1;
 fi
-
+ 
 docker build --no-cache=true -t docker_opendds .

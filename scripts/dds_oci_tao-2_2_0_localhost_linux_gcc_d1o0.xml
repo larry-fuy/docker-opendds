@@ -43,7 +43,7 @@
   <command name="print_ace_config"   options="ACE=OCIChangeLog TAO=OCIChangeLog CIAO=OCIChangeLog XML_URL=https://svn.ociweb.com/viewvc/nightly"/>
   <command name="print_make_version"/>
   <command name="check_compiler"     options="gcc"/>
-  <command name="generate_workspace" options="-type gnuace DDS_TAOv2.mwc dirs=DDS"/>
+  <command name="generate_workspace" options="-type gnuace DDS_TAOv2_all.mwc dirs=DDS"/>
 
   <!-- Build dependencies -->
   <command name="make" options="-s -k  find=*akefile dir=DDS depend"/>
@@ -52,7 +52,9 @@
   <command name="make" options="-s -k  find=*akefile dir=DDS"/>
 
   <!-- Post build -->
+<!--
   <command name="anonymous_shell" options="perl java/build_scripts/jms_scoreboard.pl test "/>
+-->
   <command name="log"             options="off"/>
   <command name="process_logs"    options="copy"/>
   <command name="status"          options="off"/>
