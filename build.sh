@@ -9,7 +9,7 @@ fail() {
 }
 
 print_usage() {
-    printf "Usage: build.sh [autobuild | configure] build_file]\n"
+    printf "Usage: build.sh [build_file.xml]\n"
     printf "Build a Docker image with OpenDDS installed (by using configure or autobuild tool)\n"
 }
 
