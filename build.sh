@@ -17,7 +17,6 @@ if [ $# -eq 0 ]; then
     cp Dockerfile_configure Dockerfile
 else if [ $# -eq 1 ]; then 
     cp Dockerfile_autobuild Dockerfile
-    sed -i 's/dds_build/$1/g' Dockerfile
 else 
     print_usage
     exit 1;

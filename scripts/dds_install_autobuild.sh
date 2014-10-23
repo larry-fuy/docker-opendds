@@ -21,8 +21,8 @@ mkdir -p $build_dir && cd $build_dir
 cp /scripts/$build_name.xml ./
 
 ## download MPC
-# curl -O http://downloads.ociweb.com/MPC/MPC_4_1_0.tar.gz
-#tar -xvzf *.tar.gz
+curl -O http://downloads.ociweb.com/MPC/MPC_4_1_0.tar.gz
+tar -xvzf *.tar.gz
 
 # run autobuild
 /autobuild/autobuild.pl -v2 $build_name.xml
