@@ -38,7 +38,7 @@ approach is more flexible than the above building approach.
 ### Build and run
 
 1.  Run ```build.sh ``` to get Docker image (see usage). For ```configure```
-build, the source code and runtime are under ```/opt/trunk```. For
+build, the source code and runtime are under ```/DDS```. For
 ```autobuild```, the source code and runtime are under
 ```/tao_builds/taoadmin/dds_build/``` or
 ```/tao_builds/taoadmin/[xml_name_you_provide]````.

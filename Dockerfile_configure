@@ -8,4 +8,4 @@ ADD scripts /scripts
 
 # Install OpenDDS
 # Readme : http://www.dre.vanderbilt.edu/~schmidt/DOC_ROOT/DDS/docs/INSTALL
-RUN cd /opt && svn co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk DDS
+RUN cd / && svn co svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk DDS
